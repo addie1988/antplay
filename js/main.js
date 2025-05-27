@@ -744,4 +744,37 @@ animatedEntryBlocks.forEach(block => visibilityTransitionObserver.observe(block)
 
 // ----------------------------------------------------------------------------------------
 
+// 修改滚动事件监听器，使用防抖优化性能
+const scrollHandler = debounce(() => {
+  const scrollPosition = window.scrollY;
+  const elements = {
+    'report_li_3_title': { top: '-900px', left: '0' },
+    'report_li_2_title': { top: '-570px', left: '0' },
+    'report_li_4_title': { top: '-1100px', left: '-570px' },
+    'report_li_1_title': { top: '-730px', left: '-80px' }
+  };
 
+  Object.entries(elements).forEach(([id, positions]) => {
+    const element = document.getElementById(id);
+    if (element) {
+      try {
+        if (scrollPosition < 1500) {
+          element.style.position = 'absolute';
+          element.style.top = positions.top;
+          element.style.left = positions.left;
+        } else {
+          element.style.position = 'relative';
+          element.style.top = '0px';
+          element.style.left = '0px';
+        }
+        element.style.transition = 'all 1s ease-in-out';
+      } catch (error) {
+        console.warn(`Error updating element ${id}:`, error);
+      }
+    }
+  });
+}, 100);
+
+window.addEventListener('scroll', scrollHandler);
+
+// ----------------------------------------------------------------------------------------
