@@ -632,7 +632,6 @@ sliderTrack.style.display = 'flex';
 sliderTrack.style.flexWrap = 'wrap';
 sliderTrack.style.justifyContent = 'center';
 sliderTrack.style.gap = '20px';
-sliderTrack.style.padding = '20px';
 
 // 創建所有圖片元素
 imageList.forEach(src => {
