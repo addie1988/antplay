@@ -871,7 +871,7 @@ html {
 .management .management_content .container .container_content .data_report .data_report_content .report .report_content ul .report_li_2_box .report_li_7_title .report_li_7_title_content .report_li_7_title_h1 .report_li_7_title_h1_content {
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding: 20px 0;
 }
 
@@ -884,7 +884,6 @@ html {
 
 .management .management_content .container .container_content .data_report .data_report_content .report .report_content ul .report_li_2_box .report_li_7_title .report_li_7_title_content .report_li_7_title_h1 .report_li_7_title_h1_content span {
   font-size: 16px;
-  margin: 0 auto;
   text-align: left;
   margin-left: 10px;
   flex-wrap: wrap;
@@ -1336,9 +1335,6 @@ html {
   .management .management_content .container .container_content .data_report .data_report_content .report .report_content ul .report_li_2_box .report_li_7_title {
     margin-top: 0;
     margin-top: 30px;
-  }
-  .management .management_content .container .container_content .data_report .data_report_content .report .report_content ul .report_li_2_box .report_li_7_title .report_li_7_title_content {
-    height: 140px;
   }
   .management .management_content .container .container_content .data_report .data_report_content .report .report_content ul .report_li_2_box .report_li_7_title .report_li_7_title_content .report_li_7_title_h1 .report_li_7_title_h1_content {
     padding: 0;
